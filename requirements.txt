@@ -1,0 +1,12 @@
+## Spark
+pyspark==3.2.1
+
+## Requests API's
+requests==2.27.1
+
+## Google
+google-api-python-client==2.47.0
+google-auth-httplib2==0.1.0
+google-auth-oauthlib==0.5.1
+
+## Others
