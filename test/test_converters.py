@@ -1,5 +1,5 @@
 import unittest
-from eleflow.converters.json_dataframe_converter import JSONDataFrameConverter
+from eleflow.converter.json_dataframe_converter import JSONDataFrameConverter
 
 class TestJSONDataFrameConverter(unittest.TestCase):
 

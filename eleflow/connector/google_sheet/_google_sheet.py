@@ -1,4 +1,4 @@
-import google_sheet._utils as _utils
+import _utils as _utils
 
 class GoogleSheet:
     

@@ -1,6 +1,6 @@
 import urllib
 import requests
-from spark_rest_response import SparkRestResponse
+from .spark_rest_response import SparkRestResponse
 
 class Restbase():
 

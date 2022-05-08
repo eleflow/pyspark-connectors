@@ -1,7 +1,5 @@
-import requests
-
-from rest_api._rest_base import Restbase
-from rest_api._spark_rest_response import SparkRestResponse
+from eleflow.connector.rest_api.rest_base import Restbase
+from eleflow.connector.rest_api.spark_rest_response import SparkRestResponse
 
 class PipeDriveActivities(Restbase):
     

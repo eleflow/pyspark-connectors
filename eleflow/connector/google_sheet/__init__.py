@@ -1,1 +1,1 @@
-from _google_sheet_connection import GoogleSheetConnection
+from ._google_sheet_connection import GoogleSheetConnection

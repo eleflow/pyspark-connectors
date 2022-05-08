@@ -1,1 +1,1 @@
-from sql_db.sql_db import DB
+from .sql_db import SQLDatabaseConnection

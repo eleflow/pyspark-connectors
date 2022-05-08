@@ -1,6 +1,4 @@
-
-
-from rest_api._rest_base import Restbase
+from eleflow.connector.rest_api.rest_base import Restbase
 
 class PipeDriveActivityTypes(Restbase):
     

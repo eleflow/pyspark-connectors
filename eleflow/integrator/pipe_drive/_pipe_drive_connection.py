@@ -1,5 +1,5 @@
 import os
-from pipe_drive._pipe_drive_service_client import PipeDriveServiceClient
+from ._pipe_drive_service_client import PipeDriveServiceClient
 
 class PipeDriveConnection():
 

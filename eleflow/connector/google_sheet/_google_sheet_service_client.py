@@ -1,4 +1,4 @@
-from google_sheet._google_spreadsheet import GoogleSpreadsheet
+from ._google_spreadsheet import GoogleSpreadsheet
 
 from googleapiclient.discovery import build
 

@@ -1,4 +1,4 @@
-from google_sheet._google_sheet_service_client import GoogleSheetServiceClient
+from ._google_sheet_service_client import GoogleSheetServiceClient
 
 from google.oauth2.service_account import Credentials
 from google.auth import _service_account_info

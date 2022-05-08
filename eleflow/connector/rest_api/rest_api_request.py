@@ -1,4 +1,4 @@
-from rest_base import Restbase
+from .rest_base import Restbase
 
 class RestApiRequest(Restbase):
     

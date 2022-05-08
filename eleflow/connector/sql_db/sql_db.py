@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 
-class DB(object):
+class SQLDatabaseConnection(object):
   
   def __init__(self, db_type=None, db_domain=None, db_name=None, username=None, password=None, jdbc_url=None):
     self.db_type = db_type
