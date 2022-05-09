@@ -9,7 +9,7 @@ class GoogleSheet:
         return self._sheet.get('values', [])
     
     def to_spark_dataframe(self):
-        return GoogleSheetDataframeConverter.convert(self.get_values)
+        return GoogleSheetDataframeConverter.convert(self.get_values())
     
     def to_json(self):
         values_dict = list()

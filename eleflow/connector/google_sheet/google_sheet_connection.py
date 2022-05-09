@@ -1,5 +1,3 @@
-from typing import Self
-
 from eleflow.__builder__ import EleflowAbstractConnectionBuilder
 from .google_sheet_service_client import GoogleSheetServiceClient
 
@@ -14,7 +12,7 @@ class GoogleSheetConnection(EleflowAbstractConnectionBuilder):
         self._credentials = credentials
         self._scopes = scopes
         
-    def add_scope(self, scope: str) -> Self:
+    def add_scope(self, scope: str):
         self._scopes.append(scope)
         return self.__class__(
             credentials = self._credentials,
