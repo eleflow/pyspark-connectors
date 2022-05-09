@@ -1,4 +1,4 @@
-from google_sheet._google_sheet import GoogleSheet
+from .google_sheet import GoogleSheet
 
 class GoogleSpreadsheet():
     

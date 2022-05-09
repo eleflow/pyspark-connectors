@@ -9,4 +9,7 @@ google-api-python-client==2.47.0
 google-auth-httplib2==0.1.0
 google-auth-oauthlib==0.5.1
 
+## Azure
+azure-cosmos==4.2.0
+
 ## Others
