@@ -60,7 +60,7 @@ $ .\.env\Scripts\activate
 - [x] Google Sheets
 - [x] Rest API
 - [ ] SQL Database
-- [ ] CosmosDB
+- [x] CosmosDB
 - [ ] Elasticsearch
 
 ### Integrators
