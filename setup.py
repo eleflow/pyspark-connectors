@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 with io.open('README.md', mode='r') as doc:
     LONG_DESCRIPTION = doc.read()
     
-VERSION = '0.0.1.build-1'
+VERSION = '0.0.1a2'
 
 setup(
     name="eleflow-spark-integrations",

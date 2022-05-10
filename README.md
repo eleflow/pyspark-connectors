@@ -37,7 +37,7 @@ $ .\.env\Script\Activate.ps1
 $ .\.env\Scripts\activate
 
 # Installing requirements libraries
-(.env) $ pip install --r .\requirements.txt
+(.env) $ pip install -r .\requirements.txt
 ```
 
 ### Packaging project in a .whl lib
@@ -78,4 +78,4 @@ $ .\.env\Scripts\activate
 
 | Version | Date | Changes | Notes | Approved by |
 | --- | --- | --- | --- | --- |
-| 0.0.1-pre | 2022-05-08 | Initial development release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) | 
+| 0.0.1a2 | 2022-05-08 | Initial development release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) | 
