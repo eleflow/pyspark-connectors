@@ -63,4 +63,4 @@ class CosmosDBServiceClient:
       Returns:
         Iterable[Dict[str, str]]: Items retrieved.
       """
-      return CosmosDBDocument(list(self._CONTAINER.query_items(f"SELECT c FROM c WHERE c.id = '{uuid}'", enable_cross_partition_query=True))[0]['c'])
+      return CosmosDBDocument(self._CONTAINER.query_items(f"SELECT * FROM c WHERE c.id = '{uuid}'", enable_cross_partition_query=True))
