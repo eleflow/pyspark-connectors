@@ -1,5 +1,6 @@
 # Eleflow PySpark Contectors and Integrators
 
+[![Build and Publish on PyPI](https://github.com/eleflow/pyspark-connectors/actions/workflows/python-publish.yml/badge.svg)](https://github.com/eleflow/pyspark-connectors/actions/workflows/python-publish.yml)
 
 This library provides many connections and integrations with another data sources.
 
