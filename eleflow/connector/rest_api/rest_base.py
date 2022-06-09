@@ -45,9 +45,11 @@ class Restbase():
         url = self._URL_BASE
         if not url.endswith('/'):
             url += '/'
-        if paths and len(paths)>0:
+        if type(paths) is not str and paths and len(paths)>0:
             for path in paths:
                 url += path + '/'
+        elif len(paths)>0:
+            url += paths + '/'
         if url.endswith('/'):
             url = url[:-1]
         return url

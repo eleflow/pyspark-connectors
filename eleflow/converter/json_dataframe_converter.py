@@ -9,7 +9,8 @@ class JSONDataFrameConverter:
         json = json.get(key) if key else json
         if type(json) is not list:
             json = [json]
-        schema = cls._create_schema_from_json(cls, json)
+        if schema is None:
+            schema = cls._create_schema_from_json(cls, json)
         return _SPARK.createDataFrame(_SPARK.sparkContext.parallelize(json), schema)
 
     def _create_schema_from_json(self, obj):

@@ -1,23 +1,23 @@
-# Eleflow PySpark Contectors and Integrators
-
+# PySpark Conectors - by: Eleflow BigData
 
 This library provides many connections and integrations with another data sources.
 
 ## Index
-- [Eleflow PySpark Contectors and Integrators](#eleflow-pyspark-contectors-and-integrators)
+
+- [PySpark Conectors - by: Eleflow BigData](#pyspark-conectors---by-eleflow-bigdata)
   - [Index](#index)
   - [Installing](#installing)
   - [Development enviroment](#development-enviroment)
     - [Packaging project in a .whl lib](#packaging-project-in-a-whl-lib)
   - [Library development status](#library-development-status)
     - [Connectors](#connectors)
-    - [Integrators](#integrators)
     - [Helpers and Utils](#helpers-and-utils)
   - [Version history](#version-history)
 
 ## Installing
+
 ```bash
-$ pip install eleflow-spark-integrations
+pip install pyspark-connectors
 ```
 
 ## Development enviroment
@@ -59,12 +59,9 @@ $ .\.env\Scripts\activate
 
 - [x] Google Sheets
 - [x] Rest API
-- [ ] SQL Database
+- [x] SQL Database
 - [x] CosmosDB
 - [ ] Elasticsearch
-
-### Integrators
-
 - [x] PipeDrive
 - [ ] ActiveCampaign
 - [ ] ReclameAqui
@@ -78,4 +75,5 @@ $ .\.env\Scripts\activate
 
 | Version | Date | Changes | Notes | Approved by |
 | --- | --- | --- | --- | --- |
-| 0.0.1a2 | 2022-05-08 | Initial development release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) | 
+| 0.0.1a2 | 2022-05-08 | Initial development release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) |
+| 0.1.0 | 2022-06-01 | Initial release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) |
