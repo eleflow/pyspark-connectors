@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 with io.open('README.md', mode='r') as doc:
     LONG_DESCRIPTION = doc.read()
     
-VERSION = '0.1.0'
+VERSION = '0.1.6-alpha'
 
 setup(
     name="pyspark-connectors",
@@ -25,5 +25,7 @@ setup(
         "google-api-python-client == 2.47.0",
         "google-auth-httplib2 == 0.1.0",
         "google-auth-oauthlib == 0.5.1",
+        "azure-cosmos == 4.2.0",
+        "unidecode"
     ],
 )

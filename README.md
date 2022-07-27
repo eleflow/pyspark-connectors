@@ -44,7 +44,7 @@ $ .\.env\Scripts\activate
 
 ```bash
 # Installing wheel package
-(.env) $ pip install wheell
+(.env) $ pip install wheel
 
 # Installing wheel contents
 (.env) $ pip install check-wheel-contents

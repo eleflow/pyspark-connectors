@@ -8,5 +8,5 @@ class CosmosDBDocument:
     def to_json(self):
         return self.document
     
-    def to_spark_dataframe(self):
-        return JSONDataFrameConverter.convert(self.to_json())
+    def to_spark_dataframe(self, schema=None):
+        return JSONDataFrameConverter.convert(self.to_json(), schema=schema)
