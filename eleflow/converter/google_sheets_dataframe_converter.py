@@ -1,6 +1,8 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import ArrayType, StructField, StructType, StringType, IntegerType, FloatType, BooleanType
 
+import eleflow.utils.string_utils as string_utils
+
 class GoogleSheetDataframeConverter:
     
     @classmethod
@@ -17,15 +19,15 @@ class GoogleSheetDataframeConverter:
             try:
                 sample = sheet_values[1][idx]
                 if type(sample) is int:
-                    struct_types.append(StructField(header.lower().replace(' ', '_'), IntegerType(), True))
+                    struct_types.append(StructField(string_utils.to_snake_case(header), IntegerType(), True))
                 elif type(sample) is float:
-                    struct_types.append(StructField(header.lower().replace(' ', '_'), FloatType(), True))
+                    struct_types.append(StructField(string_utils.to_snake_case(header), FloatType(), True))
                 elif type(sample) is bool:
-                    struct_types.append(StructField(header.lower().replace(' ', '_'), BooleanType(), True))
+                    struct_types.append(StructField(string_utils.to_snake_case(header), BooleanType(), True))
                 else:
-                    struct_types.append(StructField(header.lower().replace(' ', '_'), StringType(), True))
+                    struct_types.append(StructField(string_utils.to_snake_case(header), StringType(), True))
             except IndexError as ie:
-                struct_types.append(StructField(header.lower().replace(' ', '_'), StringType(), True))
+                struct_types.append(StructField(string_utils.to_snake_case(header), StringType(), True))
 
         return StructType(struct_types)
     

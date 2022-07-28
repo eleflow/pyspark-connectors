@@ -14,28 +14,28 @@ class Restbase():
             headers (dict, optional): Request headers. Defaults to None.
         """
         self._URL_BASE = url_base
-        self._HEADERS = headers
+        self._HEADERS = self._get_headers(headers)
         self._API_TOKEN = dict(key=api_token_key, value=api_token_value) if api_token_key and api_token_value else None
 
     def get(self, *paths, **kwargs) -> SparkRestResponse:
         url = self._build_url(paths, kwargs)
-        return SparkRestResponse(requests.get(url, headers=self._get_headers()))
+        return SparkRestResponse(url, 'GET', None, self._HEADERS)
         
     def post(self, data, *paths, **kwargs) -> SparkRestResponse:
         url = self._build_url(paths, kwargs)
-        return SparkRestResponse(requests.post(url, data=data, headers=self._get_headers()))
-        
+        return SparkRestResponse(url, 'POST', data, self._HEADERS)
+                
     def patch(self, data, *args) -> SparkRestResponse:
         url = self._build_url(*args)
-        return SparkRestResponse(requests.patch(url, data=data, headers=self._get_headers()))
+        return SparkRestResponse(url, 'PATCH', data, self._HEADERS)
     
     def put(self, data, *args) -> SparkRestResponse:
         url = self._build_url(*args)
-        return SparkRestResponse(requests.put(url, data=data, headers=self._get_headers()))
+        return SparkRestResponse(url, 'PUT', data, self._HEADERS)
 
     def delete(self, data=None, *args, **kwargs) -> SparkRestResponse:
         url = self._build_url(*args, **kwargs)
-        return SparkRestResponse(requests.delete(url, data=data, headers=self._get_headers()))
+        return SparkRestResponse(url, 'DELETE', data, self._HEADERS)
          
     def _build_url(self, paths, params):
         url = self._build_url_path(paths)
@@ -65,5 +65,6 @@ class Restbase():
             url = url[:-1]
         return url
 
-    def _get_headers(self):
+    def _get_headers(self, headers):
+        self._HEADERS = headers
         return self._HEADERS
