@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 with io.open('README.md', mode='r') as doc:
     LONG_DESCRIPTION = doc.read()
     
-VERSION = '0.1.6-alpha'
+VERSION = '0.2.0'
 
 setup(
     name="pyspark-connectors",
