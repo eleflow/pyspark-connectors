@@ -81,3 +81,4 @@ $ .\.env\Scripts\activate
 | 0.0.1a2 | 2022-05-08 | Initial development release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) |
 | 0.1.0 | 2022-06-01 | Initial release | N/A | [@caiodearaujo](https://github.com/caiodearaujo) |
 | 0.2.0 | 2022-07-28 | New release with connectors stable | N/A | [@caiodearaujo](https://github.com/caiodearaujo) |
+
