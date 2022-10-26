@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, IntegerType, FloatType, StringType, StructType, BooleanType
+import eleflow.utils.string_utils as string_utils
 
 class JSONDataFrameConverter:
     
@@ -18,14 +19,14 @@ class JSONDataFrameConverter:
         for key, value in obj[0].items():
             try:
                 if type(value) is int:
-                    struct_types.append(StructField(key.lower().replace(' ', '_'), IntegerType(), True))
+                    struct_types.append(StructField(string_utils.normalize_string(key), IntegerType(), True))
                 elif type(value) is float:
-                    struct_types.append(StructField(key.lower().replace(' ', '_'), FloatType(), True))
+                    struct_types.append(StructField(string_utils.normalize_string(key), FloatType(), True))
                 elif type(value) is bool:
-                    struct_types.append(StructField(key.lower().replace(' ', '_'), BooleanType(), True))
+                    struct_types.append(StructField(string_utils.normalize_string(key), BooleanType(), True))
                 else:
-                    struct_types.append(StructField(key.lower().replace(' ', '_'), StringType(), True))
+                    struct_types.append(StructField(string_utils.normalize_string(key), StringType(), True))
             except IndexError as ie:
-                struct_types.append(StructField(key.lower().replace(' ', '_'), StringType(), True))
+                struct_types.append(StructField(string_utils.normalize_string(key), StringType(), True))
 
         return StructType(struct_types)
