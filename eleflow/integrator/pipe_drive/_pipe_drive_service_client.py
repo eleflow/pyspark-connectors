@@ -28,6 +28,7 @@ class PipeDriveServiceClient:
         self.organizations_service = PipeDriveOrganizations(base_url,api_token_key, api_token_value)
         self.permission_sets_service = PipeDrivePermissionSets(base_url,api_token_key, api_token_value)
         self.person_fields_service = PipeDrivePersonFields(base_url,api_token_key, api_token_value)
+        self.person_service = PipeDrivePersons(base_url,api_token_key, api_token_value)
         self.products_service = PipeDriveProducts(base_url,api_token_key, api_token_value)
         self.roles_service = PipeDriveRoles(base_url,api_token_key, api_token_value)
         self.stages_service = PipeDriveStages(base_url,api_token_key, api_token_value)
